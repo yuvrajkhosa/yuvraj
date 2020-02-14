@@ -10,10 +10,64 @@
 @font-face {
     font-family: font;
     src: url('font.ttf');
-  }
-h1, p, li {
-    font-family: font;
 }
+.nameTitle{
+    font-size: 3em;
+    margin-top: 4px;
+
+}
+.avatarContainer{
+    position: relative;
+    width: 30%;
+    transition: width 2s ease;
+    margin-top: 1vh;
+    
+}
+.avatarContainer:hover{
+    width: 60%;
+}
+.avatar{
+    display: block;
+    width: 30%;
+    height: auto;
+    box-shadow: 20px 20px 60px 1px ;
+    border-radius: 50%;
+    
+}
+
+.avatarOverlay{
+    position: absolute;
+    margin: 0;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color3);
+    border-radius: 50%;
+    overflow: hidden;
+    width: 30%;
+    height:0;
+    transition: .5s ease;
+}
+
+.avatarContainer:hover .avatarOverlay{
+    bottom: 0;
+    height: 100%;
+}
+
+.overlayText{
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 200%;
+    cursor: default;
+}
+
 .pdf{
     height: 100vh;
 }
@@ -22,6 +76,7 @@ a{
     text-decoration: none;
 }
 html{
+    font-family: font;
     height: 100%;
     color: var(--color5);
 }
@@ -37,7 +92,10 @@ body{
         "nav text";
     height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
+
 
 object{
     width: 50vw;
@@ -51,29 +109,37 @@ object{
     max-height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    width: 90vw;
-  
+    width: 90vw; 
 }
 .volunteerTitle{
     margin-left: 2px;
-
     grid-column: 2;
     grid-row: 2;
     font-size: 3em;
-   
     align-self: center;
     justify-self: start;
+    transition: font-size 1.2s;
+    width: fit-content;
+    border: none;
+    cursor: default;
 }
+
+.volunteerTitle:hover{
+    font-size: 3.5em;
+}
+
+
 .text{
     grid-column: 2/4;
     grid-row: 3;
-   
     margin-left: 10px;
 }
 .text p{
     font-size: 24px;
     margin-left: 5vw;
     margin-right: 5vw;
+    text-indent: 50px;
+
 }
 
 .navBar{
