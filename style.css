@@ -11,6 +11,61 @@
     font-family: font;
     src: url('font.ttf');
 }
+
+ul{
+    margin-left: 0px;
+    padding: 0px;
+
+}
+li{
+    font-size: 1.5vw;
+
+    margin-bottom: 1em;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+html{
+    font-family: font;
+    height: 100%;
+    color: var(--color5);
+	scroll-behavior: smooth;
+}
+body{
+    background-color: var(--color1);
+    display: grid;
+    grid-template-rows: 10% 25% 1fr;
+    grid-template-columns: 12vw 1fr;
+    margin: 0;
+    grid-template-areas: 
+        "nav header"
+        "nav title"
+        "nav text";
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+object{
+    width: 50vw;
+    height: 70%;
+}
+table, th, td{
+    font-size: 2vw;
+    border: 2px black solid;
+    border-collapse: collapse;
+    padding: 15px;
+}
+table li{
+    text-align: left;
+    margin: 0;
+    padding: 5px;
+}
 .nameTitle{
     font-size: 3em;
     margin-top: 4px;
@@ -71,37 +126,7 @@
 .pdf{
     height: 100vh;
 }
-a{
-    color: inherit;
-    text-decoration: none;
-}
-html{
-    font-family: font;
-    height: 100%;
-    color: var(--color5);
-}
-body{
-    background-color: var(--color1);
-    display: grid;
-    grid-template-rows: 10% 25% 1fr;
-    grid-template-columns: 12vw 1fr;
-    margin: 0;
-    grid-template-areas: 
-        "nav header"
-        "nav title"
-        "nav text";
-    height: 100vh;
-    width: 100vw;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
 
-
-object{
-    width: 50vw;
-    height: 70%;
-
-}
 
 .geeringUpImage{
     grid-row: 2;
@@ -169,19 +194,7 @@ object{
     background-color: var(--color3);;
     border-radius: 10px;
 }
-ul{
-    margin-left: 0px;
-    padding: 0px;
 
-}
-li{
-    font-size: 1.5vw;
-
-    margin-bottom: 1em;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-}
 .listElem{
     background-color: var(--color2);
     cursor: pointer;
